@@ -1,0 +1,126 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 30px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: linear-gradient(135deg, #ffd6e7, #fff);
+  overflow-x: hidden;
+}
+
+.card {
+  width: 100%;
+  max-width: 450px;
+  background: white;
+  border-radius: 25px;
+  padding: 30px 25px;
+  box-sizing: border-box;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  
+  /* hapus max-height dan overflow-y */
+  height: auto;
+}
+
+.card p {
+  line-height: 1.8;
+  text-align: justify;
+  font-size: 16px;
+  color: #444;
+}
+.bear {
+  width: 130px;
+}
+
+h1 {
+  color: #ff5c8a;
+}
+
+button {
+  border: 0;
+  padding: 12px 25px;
+  border-radius: 30px;
+  background: #ff6f9c;
+  color: white;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#no {
+  background: #aaa;
+  position: relative;
+}
+
+#message {
+  display: none;
+  color: #555;
+  line-height: 1.5;
+  font-size:5px;
+}
+
+.heart {
+  position: absolute;
+  color: #ff6f9c;
+  animation: fall 5s linear infinite;
+}
+
+.photo {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px #ddd;
+  margin-bottom: 15px;
+  
+}
+
+#loveText {
+  max-height: 300px;
+  overflow-y: auto;
+  text-align: left;
+  line-height: 1.6;
+  padding: 10px;
+}
+.love {
+  position: fixed;
+  top: -20px;
+  font-size: 25px;
+  animation: fall linear forwards;
+  z-index: 999;
+  pointer-events: none;
+}
+.photo {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: photoFade 10s ease forwards;
+}
+
+@keyframes photoFade {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+@keyframes fall {
+  
+  from {
+    transform: translateY(-100px);
+  }
+  
+  to {
+    transform: translateY(100vh);
+  }
+  
+}
